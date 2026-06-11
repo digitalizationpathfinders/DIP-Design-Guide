@@ -18,32 +18,43 @@
       </nav>
     </header>
 
-    <main>
-      <section class="page-intro">
-        <p class="eyebrow">Component</p>
-        <h1>Button</h1>
-        <p>Buttons are the main action points in forms. Use them consistently for submit, cancel, and navigation actions.</p>
-      </section>
+    <div class="two-column">
+      <aside id="site-sidebar" class="site-sidebar" data-list="components"></aside>
 
-      <nav class="variant-nav" aria-label="Jump to variant guidance">
-        <a class="variant-link" href="#canada">Canada.ca guidance</a>
-        <a class="variant-link" href="#portal">Portal guidance</a>
-      </nav>
+      <main style="background: white; border-radius: 0; padding: 0; border: none;">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="../components.html">Components</a>
+          <span>/</span>
+          <span>Button</span>
+        </nav>
 
-      <div class="article-body">
-        <section id="canada" class="article-section variant-section variant-section--canada">
-          <h2>Canada.ca guidance</h2>
-          <p>Use the standard Canada.ca button styling with clear hierarchy and consistent spacing between actions.</p>
-          <p>Primary buttons should stand out while secondary actions remain visible but less prominent.</p>
+        <section class="page-intro" style="background: transparent; border: none; padding: 0; margin: 24px 0;">
+          <h1 style="margin: 0 0 12px;">Button</h1>
+          <p style="color: var(--muted); margin: 0;">Buttons are the main action points in forms. Use them consistently for submit, cancel, and navigation actions.</p>
         </section>
 
-        <section id="portal" class="article-section variant-section variant-section--portal">
-          <h2>Portal guidance</h2>
-          <p>Inside portals, confirm the portal theme for button color, border, and hover treatment.</p>
-          <p>Keep the action structure the same: one main call to action and optional secondary or tertiary controls.</p>
-        </section>
-      </div>
-    </main>
+        <nav class="variant-nav" aria-label="Jump to variant guidance" style="margin: 24px 0;">
+          <a class="variant-link" href="#canada">Canada.ca guidance</a>
+          <a class="variant-link" href="#portal">Portal guidance</a>
+        </nav>
+
+        <div class="article-body" style="display: grid; gap: 24px; margin-top: 24px;">
+          <section id="canada">
+            <h2>Canada.ca guidance</h2>
+            <p>Use the standard Canada.ca button styling with clear hierarchy and consistent spacing between actions.</p>
+            <p>Primary buttons should stand out while secondary actions remain visible but less prominent.</p>
+          </section>
+
+          <section id="portal">
+            <h2>Portal guidance</h2>
+            <p>Inside portals, confirm the portal theme for button color, border, and hover treatment.</p>
+            <p>Keep the action structure the same: one main call to action and optional secondary or tertiary controls.</p>
+          </section>
+        </div>
+      </main>
+    </div>
 
     <footer class="page-footer">
       <p><a href="../components.html">Back to components</a></p>

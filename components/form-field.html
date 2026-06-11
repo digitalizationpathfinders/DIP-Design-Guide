@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form field · Components · Webform Design Guide</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand"><a href="../index.html">Webform Design Guide</a></div>
+      <nav class="page-nav">
+        <a href="../components.html" aria-current="page">Components</a>
+        <a href="../patterns.html">Patterns</a>
+        <a href="../text-translations.html">Text &amp; translations</a>
+        <a href="../ux-testing.html">UX Testing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">Component</p>
+        <h1>Form field</h1>
+        <p>Design accessible form fields with clear labels, help text, and error states.</p>
+      </section>
+
+      <nav class="variant-nav" aria-label="Jump to variant guidance">
+        <a class="variant-link" href="#canada">Canada.ca guidance</a>
+        <a class="variant-link" href="#portal">Portal guidance</a>
+      </nav>
+
+      <div class="article-body">
+        <section id="canada" class="article-section variant-section variant-section--canada">
+          <h2>Canada.ca guidance</h2>
+          <p>Use left-aligned labels and consistent spacing for readability. Keep help text and error text close to the input.</p>
+          <h3>Example markup</h3>
+          <pre><code>&lt;label for="email"&gt;Email address&lt;/label&gt;
+&lt;input id="email" name="email" aria-describedby="email-help email-error" /&gt;
+&lt;p id="email-help"&gt;We use this address for notifications.&lt;/p&gt;
+&lt;p id="email-error" class="error"&gt;Enter a valid email address.&lt;/p&gt;</code></pre>
+        </section>
+
+        <section id="portal" class="article-section variant-section variant-section--portal">
+          <h2>Portal guidance</h2>
+          <p>Inside portals, use the portal layout and field grouping rules. Confirm whether fields should appear inside framed cards or clean panels.</p>
+          <h3>Example markup</h3>
+          <pre><code>&lt;div class="portal-field-group"&gt;
+  &lt;label for="email"&gt;Email address&lt;/label&gt;
+  &lt;input id="email" name="email" aria-describedby="email-help email-error" /&gt;
+  &lt;p id="email-help"&gt;We use this address for notifications.&lt;/p&gt;
+  &lt;p id="email-error" class="error"&gt;Enter a valid email address.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p><a href="../components.html">Back to components</a></p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

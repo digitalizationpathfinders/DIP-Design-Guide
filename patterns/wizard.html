@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wizard flow · Patterns · Webform Design Guide</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand"><a href="../index.html">Webform Design Guide</a></div>
+      <nav class="page-nav">
+        <a href="../components.html">Components</a>
+        <a href="../patterns.html" aria-current="page">Patterns</a>
+        <a href="../text-translations.html">Text &amp; translations</a>
+        <a href="../ux-testing.html">UX Testing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">Pattern</p>
+        <h1>Wizard flow</h1>
+        <p>Use a wizard when a form has multiple steps and users need progress indicators and clear navigation.</p>
+      </section>
+
+      <div class="article-body">
+        <section class="article-section">
+          <h2>Progress and navigation</h2>
+          <p>Show the current step, use a clear title for each stage, and provide a consistent way to move forward and backward.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Accessibility notes</h2>
+          <p>Include status text for screen readers and keep focus on the main heading after each step change.</p>
+          <pre><code>&lt;nav aria-label="Progress"&gt;
+  &lt;ol&gt;
+    &lt;li aria-current="step"&gt;Personal information&lt;/li&gt;
+    &lt;li&gt;Review&lt;/li&gt;
+    &lt;li&gt;Submit&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        </section>
+
+        <section class="article-section note-panel">
+          <h2>Portal vs Canada.ca</h2>
+          <p>Inside portals, the progress UI may reflect portal navigation patterns. Outside portals, follow Canada.ca content structure and use visible step summaries.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p><a href="../patterns.html">Back to patterns</a></p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

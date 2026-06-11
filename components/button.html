@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button · Components · Webform Design Guide</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand"><a href="../index.html">Webform Design Guide</a></div>
+      <nav class="page-nav">
+        <a href="../components.html" aria-current="page">Components</a>
+        <a href="../patterns.html">Patterns</a>
+        <a href="../text-translations.html">Text &amp; translations</a>
+        <a href="../ux-testing.html">UX Testing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">Component</p>
+        <h1>Button</h1>
+        <p>Buttons are the main action points in forms. Use them consistently for submit, cancel, and navigation actions.</p>
+      </section>
+
+      <nav class="variant-nav" aria-label="Jump to variant guidance">
+        <a class="variant-link" href="#canada">Canada.ca guidance</a>
+        <a class="variant-link" href="#portal">Portal guidance</a>
+      </nav>
+
+      <div class="article-body">
+        <section id="canada" class="article-section variant-section variant-section--canada">
+          <h2>Canada.ca guidance</h2>
+          <p>Use the standard Canada.ca button styling with clear hierarchy and consistent spacing between actions.</p>
+          <p>Primary buttons should stand out while secondary actions remain visible but less prominent.</p>
+          <h3>Example markup</h3>
+          <pre><code>&lt;button type="submit" class="btn-primary"&gt;Save and continue&lt;/button&gt;
+&lt;button type="button" class="btn-secondary"&gt;Back&lt;/button&gt;</code></pre>
+        </section>
+
+        <section id="portal" class="article-section variant-section variant-section--portal">
+          <h2>Portal guidance</h2>
+          <p>Inside portals, confirm the portal theme for button color, border, and hover treatment.</p>
+          <p>Keep the action structure the same: one main call to action and optional secondary or tertiary controls.</p>
+          <h3>Example markup</h3>
+          <pre><code>&lt;button type="submit" class="btn-primary portal-style"&gt;Save and continue&lt;/button&gt;
+&lt;button type="button" class="btn-secondary portal-style"&gt;Cancel&lt;/button&gt;</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p><a href="../components.html">Back to components</a></p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

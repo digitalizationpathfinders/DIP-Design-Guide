@@ -22,8 +22,8 @@ body.portal-outside {
   --surface: #ffffff;
   --text: #111111;
   --muted: #4d5761;
-  --accent: #0066cc;
-  --note-bg: #e8f0fe;
+  --accent: #008080;
+  --note-bg: #e0f2f1;
 }
 
 body.portal-inside {
@@ -31,10 +31,16 @@ body.portal-inside {
   --surface: #fff;
   --text: #1d2939;
   --muted: #4a5568;
-  --accent: #005a9e;
-  --note-bg: #dfe7f3;
+  --accent: #008080;
+  --note-bg: #e0f2f1;
 }
 
+.page-header {
+  background: var(--accent);
+  color: var(--page-bg);
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.7);
+}
 .page-shell {
   max-width: 980px;
   margin: 0 auto;
@@ -55,6 +61,10 @@ body.portal-inside {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.brand a:hover {
+    text-decoration: underline;
 }
 
 .page-nav {
@@ -260,7 +270,7 @@ body.portal-inside {
 
 .article-section {
   padding: 20px;
-  background: var(--page-bg);
+  background: var(--surface);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 16px;
 }
@@ -308,13 +318,11 @@ body.portal-inside {
 }
 
 .variant-section--canada {
-  background: #f4f7ff;
-  border: 1px solid #d4d9f1;
+  border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .variant-section--portal {
-  background: #edf7ef;
-  border: 1px solid #c9ddc8;
+  border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 pre {

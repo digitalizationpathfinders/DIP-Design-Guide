@@ -1,7 +1,7 @@
 const guidePages = [
   { title: 'Components', url: 'components.html', summary: 'Browse reusable UI building blocks.' },
   { title: 'Patterns', url: 'patterns.html', summary: 'Discover common form workflows and guidance.' },
-  { title: 'Text & translations', url: 'text-translations.html', summary: 'Writing conventions, CRA guidance, and translation resources.' },
+  { title: 'Text & translations', url: 'Text & translations.html', summary: 'Writing conventions, CRA guidance, and translation resources.' },
   { title: 'UX Testing', url: 'ux-testing.html', summary: 'Guidance for recruiting participants and running test cycles.' },
   { title: 'Button', url: 'components/button.html', summary: 'Primary and secondary action button guidance.' },
   { title: 'Form field', url: 'components/form-field.html', summary: 'Labels, input layout, and validation messaging.' },
@@ -57,7 +57,7 @@ function renderSearchResults(query) {
 
   const normalizedQuery = query.trim().toLowerCase();
   if (!normalizedQuery) {
-    resultsRoot.innerHTML = '<p class="search-note">Enter a term to search the guide.</p>';
+    resultsRoot.innerHTML = '';
     return;
   }
 

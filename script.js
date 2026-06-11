@@ -42,18 +42,18 @@ const componentsList = [
 ];
 
 const patternsList = [
-  { type: 'header', title: 'Ask users for' },
-  { title: 'Addresses', url: 'patterns/ask-addresses.html' },
-  { title: 'Dates', url: 'patterns/ask-dates.html' },
-  { title: 'Names', url: 'patterns/ask-names.html' },
-  { title: 'Phone numbers', url: 'patterns/ask-phone-numbers.html' },
-  { title: 'Social insurance numbers', url: 'patterns/ask-social-insurance-numbers.html' },
-  { type: 'header', title: 'Help users to' },
+  { type: 'header', title: 'Ask users for:' },
+  { title: 'Addresses', url: 'patterns/addresses.html' },
+  { title: 'Dates', url: 'patterns/dates.html' },
+  { title: 'Names', url: 'patterns/names.html' },
+  { title: 'Phone numbers', url: 'patterns/phone-numbers.html' },
+  { title: 'Social insurance numbers', url: 'patterns/social-insurance-numbers.html' },
+  { type: 'header', title: 'Help users to:' },
   { title: 'Check service is suitable', url: 'patterns/check-service-suitable.html' },
   { title: 'Review answers', url: 'patterns/review-answers.html' },
   { title: 'Start using a service', url: 'patterns/start-using-service.html' },
   { title: 'Recover from validation errors', url: 'patterns/recover-validation-errors.html' },
-  { type: 'header', title: 'Pages' },
+  { type: 'header', title: 'Pages:' },
   { title: 'Confirmation pages', url: 'patterns/confirmation-pages.html' },
   { title: 'Service unavailable pages', url: 'patterns/service-unavailable-pages.html' },
   { title: 'Step by step', url: 'patterns/step-by-step.html' }

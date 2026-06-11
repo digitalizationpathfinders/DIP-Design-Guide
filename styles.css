@@ -122,7 +122,7 @@ body.portal-inside {
   gap: 6px;
   font-size: 0.9rem;
   color: var(--muted);
-  margin-bottom: 24px;
+  margin: 24px 0px;
 }
 
 .breadcrumb a {
@@ -352,8 +352,9 @@ body.portal-inside {
 }
 
 .site-sidebar {
-  position: sticky;
-  top: 24px;
+  position: relative;
+  top: 52px !important;
+  
 }
 
 .site-sidebar .sidebar-nav {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Summary card · Components · Webform Design Guide</title>
+  <title>Ask for social insurance numbers · Patterns · Webform Design Guide</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -12,50 +12,46 @@
       <div class="brand"><a href="../index.html">Webform Design Guide</a></div>
       <nav class="page-nav">
         <a href="../components.html">Components</a>
-        <a href="../patterns.html">Patterns</a>
+        <a href="../patterns.html" aria-current="page">Patterns</a>
         <a href="../text-translations.html">Text &amp; translations</a>
         <a href="../ux-testing.html">UX Testing</a>
       </nav>
     </header>
 
     <div class="two-column">
-      <aside id="site-sidebar" class="site-sidebar" data-list="components"></aside>
+      <aside id="site-sidebar" class="site-sidebar" data-list="patterns"></aside>
 
       <main style="background: white; border-radius: 0; padding: 0; border: none;">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="../index.html">Home</a>
           <span>/</span>
-          <a href="../components.html">Components</a>
+          <a href="../patterns.html">Patterns</a>
           <span>/</span>
-          <span>Summary card</span>
+          <span>Social Insurance Numbers</span>
         </nav>
 
         <section class="page-intro" style="background: transparent; border: none; padding: 0; margin: 24px 0;">
-          <h1 style="margin: 0 0 12px;">Summary card</h1>
-          <p style="color: var(--muted); margin: 0;">Use summary cards to provide a short review or recap of form selections before the final submission.</p>
+          <p class="eyebrow">Ask users for:</p>
+          <h1 style="margin: 0 0 12px;">Social Insurance Numbers</h1>
+          <p style="color: var(--muted); margin: 0;">Collect social insurance numbers securely with proper masking and validation.</p>
         </section>
 
-        <nav class="variant-nav" aria-label="Jump to variant guidance" style="margin: 24px 0;">
-          <a class="variant-link" href="#canada">Canada.ca guidance</a>
-          <a class="variant-link" href="#portal">Portal guidance</a>
-        </nav>
-
         <div class="article-body" style="display: grid; gap: 24px; margin-top: 24px;">
-          <section id="canada">
-            <h2>Canada.ca guidance</h2>
-            <p>Keep summary cards simple and focused on the highlighted information. Use clear headings and a clean stack layout.</p>
+          <section>
+            <h2>SIN security</h2>
+            <p>Mask input for privacy, provide clear formatting guidance (XXX-XXX-XXX), and validate using the proper algorithm. Only request when necessary.</p>
           </section>
 
-          <section id="portal">
-            <h2>Portal guidance</h2>
-            <p>Inside portals, summary cards may include a slightly stronger panel style or border treatment to match portal visuals.</p>
+          <section>
+            <h2>Portal vs Canada.ca</h2>
+            <p>Ensure secure transmission and storage according to CRA and data protection guidelines.</p>
           </section>
         </div>
       </main>
     </div>
 
     <footer class="page-footer">
-      <p><a href="../components.html">Back to components</a></p>
+      <p><a href="../patterns.html">Back to patterns</a></p>
     </footer>
   </div>
 

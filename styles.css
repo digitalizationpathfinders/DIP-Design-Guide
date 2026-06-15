@@ -146,6 +146,40 @@ body.portal-inside {
   margin-top: 24px;
 }
 
+.page-intro {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.page-intro h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.page-intro p {
+  margin: 0;
+}
+
+/* Subpage main content styling */
+.two-column main {
+  background: white;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+
+.two-column .article-body {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.variant-nav {
+  margin: 24px 0;
+}
+
 .hero {
   display: grid;
   gap: 24px;

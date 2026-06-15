@@ -165,13 +165,13 @@ function renderSidebar(listName) {
 }
 
 function renderNavBar(listName) {
-        console.log("hello")
 
   const navbar = document.getElementById('page-nav');
   if (!navbar) return;
 
-  const list = listName;
+  const list = topNavList; // Only one top nav list for now, but can expand with listName if needed
 
+        console.log(list)
 
   const html = ['<nav class="page-nav" aria-label="page navigation">'];
   list.forEach(item => {
@@ -185,7 +185,7 @@ function renderNavBar(listName) {
 
   // Mark active link
   const current = location.pathname.split('/').pop();
-  sidebar.querySelectorAll('a').forEach(a => {
+  navbar.querySelectorAll('a').forEach(a => {
     const href = a.getAttribute('href').split('/').pop();
     if (href === current) a.classList.add('active');
   });

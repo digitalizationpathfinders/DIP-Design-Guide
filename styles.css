@@ -38,7 +38,7 @@ body.portal-inside {
 .page-header {
   background: var(--page-bg);
   color: var(--accent);
-  padding: 0px 24px;
+  padding: 0px 38px;
   margin-bottom:0px;
   padding-top: 8px;
 
@@ -46,7 +46,7 @@ body.portal-inside {
 .page-shell {
   max-width: 100%;
   margin: 0 auto;
-  padding: 24px;
+  padding: 38px;
 }
 
 .site-header {
@@ -136,16 +136,57 @@ body.portal-inside {
   text-decoration: underline;
 }
 
-.hero,
-.search-panel,
-.page-intro,
-.quick-links,
-.link-list {
-  background: var(--surface);
+.section-panel {
+  background: var(--page-bg);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+  padding: 34px 0px;
+}
+.section-panel input[type="search"] {
+  width: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+.search-results {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.section-panel .search-card,
+.section-panel .list-item,
+.section-panel .card-link {
+  display: block;
+  padding: 18px;
+  background: var(--page-bg);
   border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 18px;
-  padding: 28px;
-  margin-top: 24px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.section-panel .search-card:hover,
+.section-panel .list-item:hover,
+.section-panel .card-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+.section-panel .search-card h3,
+.section-panel .list-item h2,
+.section-panel .card-link h3 {
+  margin: 0 0 8px;
+}
+
+.section-panel .search-card p,
+.section-panel .list-item p,
+.section-panel .card-link p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .page-intro {
@@ -182,10 +223,6 @@ body.portal-inside {
   margin: 24px 0;
 }
 
-.hero {
-  display: grid;
-  gap: 24px;
-}
 
 .eyebrow {
   margin: 0 0 10px;
@@ -196,24 +233,17 @@ body.portal-inside {
   letter-spacing: 0.06em;
 }
 
-.hero h1,
-.page-intro h1 {
+.section-panel h1 {
   margin: 0;
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.hero p,
-.page-intro p,
+
+.section-panel p,
 .section-header p {
   margin: 0;
   color: var(--muted);
   max-width: 60rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 
 .context-button {
@@ -245,53 +275,7 @@ body.portal-inside {
   font-weight: 600;
 }
 
-.search-panel input[type="search"] {
-  width: 100%;
-  border: 1px solid rgba(17, 17, 17, 0.12);
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 1rem;
-  margin-top: 14px;
-}
 
-.search-results {
-  margin-top: 18px;
-  display: grid;
-  gap: 12px;
-}
-
-.search-card,
-.list-item,
-.card-link {
-  display: block;
-  padding: 18px;
-  background: var(--page-bg);
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.search-card:hover,
-.list-item:hover,
-.card-link:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent);
-}
-
-.search-card h3,
-.list-item h2,
-.card-link h3 {
-  margin: 0 0 8px;
-}
-
-.search-card p,
-.list-item p,
-.card-link p {
-  margin: 0;
-  color: var(--muted);
-}
 
 .card-grid {
   display: grid;

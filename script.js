@@ -12,20 +12,27 @@ const guidePages = [
   { title: 'Select', url: 'components/select.html', summary: 'Dropdown select lists and multi-select guidance.' },
   { title: 'Stepper', url: 'components/stepper.html', summary: 'Multi-step form progress indicators.' },
   { title: 'Textarea', url: 'components/textarea.html', summary: 'Multi-line text input with optional character limits.' },
-  { title: 'Ask for addresses', url: 'patterns/ask-addresses.html', summary: 'Collecting address information with proper field breakdown.' },
-  { title: 'Ask for dates', url: 'patterns/ask-dates.html', summary: 'Accepting date input with formatting guidance.' },
-  { title: 'Ask for names', url: 'patterns/ask-names.html', summary: 'Collecting name information inclusively.' },
-  { title: 'Ask for phone numbers', url: 'patterns/ask-phone-numbers.html', summary: 'Phone number formats and validation.' },
-  { title: 'Ask for social insurance numbers', url: 'patterns/ask-social-insurance-numbers.html', summary: 'Secure SIN collection with masking and guidance.' },
+  { title: 'Addresses', url: 'patterns/addresses.html', summary: 'Collecting address information with proper field breakdown.' },
+  { title: 'Dates', url: 'patterns/dates.html', summary: 'Accepting date input with formatting guidance.' },
+  { title: 'Names', url: 'patterns/names.html', summary: 'Collecting name information inclusively.' },
+  { title: 'Phone numbers', url: 'patterns/phone-numbers.html', summary: 'Phone number formats and validation.' },
+  { title: 'Social insurance numbers', url: 'patterns/social-insurance-numbers.html', summary: 'Secure SIN collection with masking and guidance.' },
   { title: 'Check service is suitable', url: 'patterns/check-service-suitable.html', summary: 'Help users determine if a service meets their needs.' },
   { title: 'Review answers', url: 'patterns/review-answers.html', summary: 'Summary pages for reviewing and editing form data.' },
   { title: 'Start using a service', url: 'patterns/start-using-service.html', summary: 'Guidance for onboarding and getting started flows.' },
   { title: 'Recover from validation errors', url: 'patterns/recover-validation-errors.html', summary: 'Error messaging, focus management, and recovery paths.' },
   { title: 'Confirmation pages', url: 'patterns/confirmation-pages.html', summary: 'Success confirmation with next steps and reference numbers.' },
   { title: 'Service unavailable pages', url: 'patterns/service-unavailable-pages.html', summary: 'Maintenance, outage, and error page guidance.' },
-  { title: 'Step by step', url: 'patterns/step-by-step.html', summary: 'Splitting complex tasks into sequential steps.' },
   { title: 'Writing conventions', url: 'text-translations/writing-conventions.html', summary: 'Plain language and writing guidance for form content.' },
   { title: 'CRA writing guidance', url: 'text-translations/cra-writing-guide.html', summary: 'Links and notes for CRA and Canada.ca content rules.' }
+];
+
+// Topnav lists for shared navigation
+const topNavList = [
+  { title: 'Components', url: 'components.html' },
+  { title: 'Patterns', url: 'patterns.html' },
+  { title: 'Text & translations', url: 'text-translations.html' },
+  { title: 'UX Testing', url: 'ux-testing.html' }
 ];
 
 // Sidebar lists for shared navigation
@@ -157,6 +164,33 @@ function renderSidebar(listName) {
   });
 }
 
+function renderNavBar(listName) {
+        console.log("hello")
+
+  const navbar = document.getElementById('page-nav');
+  if (!navbar) return;
+
+  const list = listName;
+
+
+  const html = ['<nav class="page-nav" aria-label="page navigation">'];
+  list.forEach(item => {
+    
+      html.push(`<a href="${item.url}">${item.title}</a>`);
+    
+  });
+  html.push('</nav>');
+
+  navbar.innerHTML = html.join('');
+
+  // Mark active link
+  const current = location.pathname.split('/').pop();
+  sidebar.querySelectorAll('a').forEach(a => {
+    const href = a.getAttribute('href').split('/').pop();
+    if (href === current) a.classList.add('active');
+  });
+
+}
 function initSidebar() {
   const sidebar = document.getElementById('site-sidebar');
   if (!sidebar) return;
@@ -164,8 +198,19 @@ function initSidebar() {
   renderSidebar(listName);
 }
 
+function initNavBar() {
+
+  const nav = document.getElementById('page-nav');
+  if (!nav) return;
+
+  const listName = nav.dataset.list || 'top-nav';
+  renderNavBar(listName);
+
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   initContext();
   initSearch();
   initSidebar();
+  initNavBar();
 });

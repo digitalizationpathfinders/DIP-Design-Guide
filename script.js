@@ -56,7 +56,6 @@ const patternsList = [
   { type: 'header', title: 'Pages:' },
   { title: 'Confirmation pages', url: 'patterns/confirmation-pages.html' },
   { title: 'Service unavailable pages', url: 'patterns/service-unavailable-pages.html' },
-  { title: 'Step by step', url: 'patterns/step-by-step.html' }
 ];
 
 const contextKey = 'designGuideContext';

@@ -36,10 +36,12 @@ body.portal-inside {
 }
 
 .page-header {
-  background: var(--accent);
-  color: var(--page-bg);
-  padding: 16px 24px;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.7);
+  background: var(--page-bg);
+  color: var(--accent);
+  padding: 0px 24px;
+  margin-bottom:0px;
+  padding-top: 8px;
+
 }
 .page-shell {
   max-width: 980px;

@@ -29,10 +29,10 @@ const guidePages = [
 
 // Topnav lists for shared navigation
 const topNavList = [
-  { title: 'Components', url: 'components.html' },
-  { title: 'Patterns', url: 'patterns.html' },
-  { title: 'Text & translations', url: 'text-translations.html' },
-  { title: 'UX Testing', url: 'ux-testing.html' }
+  { title: 'Components', url: '/components.html' },
+  { title: 'Patterns', url: '/patterns.html' },
+  { title: 'Text & translations', url: '/text-translations.html' },
+  { title: 'UX Testing', url: '/ux-testing.html' }
 ];
 
 // Sidebar lists for shared navigation

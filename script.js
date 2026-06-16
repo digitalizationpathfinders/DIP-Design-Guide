@@ -155,6 +155,7 @@ function renderSidebar(listName) {
   html.push('</ul></nav>');
 
   sidebar.innerHTML = html.join('');
+  
 
   // Mark active link
   const current = location.pathname.split('/').pop();

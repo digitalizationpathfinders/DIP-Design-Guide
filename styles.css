@@ -35,6 +35,14 @@ body.portal-inside {
   --note-bg: #e0f2f1;
 }
 
+a {
+  color: var(--accent);
+} 
+a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 .page-header {
   background: var(--page-bg);
   color: var(--accent);

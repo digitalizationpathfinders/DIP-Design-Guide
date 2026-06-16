@@ -29,10 +29,10 @@ const guidePages = [
 
 // Topnav lists for shared navigation
 const topNavList = [
-  { title: 'Components', url: '/components.html' },
-  { title: 'Patterns', url: '/patterns.html' },
-  { title: 'Text & translations', url: '/text-translations.html' },
-  { title: 'UX Testing', url: '/ux-testing.html' }
+  { title: 'Components', url: 'components.html' },
+  { title: 'Patterns', url: 'patterns.html' },
+  { title: 'Text & translations', url: 'text-translations.html' },
+  { title: 'UX Testing', url: 'ux-testing.html' }
 ];
 
 // Sidebar lists for shared navigation
@@ -69,7 +69,7 @@ const contextKey = 'designGuideContext';
 const defaultContext = 'outside';
 
 function getRootPrefix() {
-  if (location.pathname.includes('/components/') || location.pathname.includes('/patterns/')) {
+  if (location.pathname.includes('/components/') || location.pathname.includes('/patterns/') || location.pathname.includes('/text-translations/') || location.pathname.includes('/ux-testing/')) {
     return '../';
   }
   return '';
@@ -169,6 +169,7 @@ function renderNavBar(listName) {
   const navbar = document.getElementById('page-nav');
   if (!navbar) return;
 
+  const prefix = getRootPrefix();
   const list = topNavList; // Only one top nav list for now, but can expand with listName if needed
 
         console.log(list)
@@ -176,7 +177,7 @@ function renderNavBar(listName) {
   const html = ['<nav class="page-nav" aria-label="page navigation">'];
   list.forEach(item => {
     
-      html.push(`<a href="${item.url}">${item.title}</a>`);
+      html.push(`<a href="${prefix + item.url}">${item.title}</a>`);
     
   });
   html.push('</nav>');
